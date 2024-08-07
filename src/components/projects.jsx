@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import { useMediaQuery } from 'react-responsive';
 import Reveal from './Reveal';
-// import project from '../assets/project1.png'
-import project2 from '../assets/project2.png'
+import project from '../assets/project1.png'
 import project3 from '../assets/project3.png'
+
+import project2 from '../assets/project2.png'
+import project4 from '../assets/project4.png'
 
 
 
@@ -40,10 +42,34 @@ export default function Project(){
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center justify-center mt-[4rem] gap-5 md:gap-9 lg:gap-14 px-2'>
 
-            
+            <Link to='https://login-nu-snowy.vercel.app'>
+            <div className='flex flex-col items-center justify-center gap-4 md:gap-5 lg:gap-10 mb-[0.56rem] overflow-hidden sm:w-[17rem] md:w-[18rem] lg:w-[18rem] p-5 bg-[rgb(24,24,24)] text-white icon-box'
+        data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+          data-aos-offset={isBigScreen ? '10' : '2'}>
+        <div className='relative'>
+                <motion.img src={project4} alt='return of the city' className='w-full h-auto flex-shrink-0 img-hero' 
+                  initial={{opacity: 0}} 
+                animate={{opacity: 1}} 
+                transition={{delay: 1.5, ease: 'easeOut', duration: 1.5}}
+                />
+                <div className='overlay'></div>
+                </div>
+                <div className="mt-[0.5rem]">
+
+                <h4 className='text-xs'>Frontend</h4>
+                <Reveal>
+                  <h3 className="text-lg font-bold dancing-script-big">A frontend project based on login pages of some popular social media platforms.</h3>
+                </Reveal>
+                  
+                  <Reveal>
+                  <p><strong>Technologies Used:</strong> React, Tailwindcss, HTML, CSS</p>
+                 </Reveal>
+                </div>
+                </div>
+                </Link>
 
 
-              <Link to='https://archbuild.vercel.app'>
+              <Link to='https://archbuild.vercel.app/'>
                 <div className='flex flex-col items-center justify-center gap-4 md:gap-5 lg:gap-10 mb-[0.56rem] overflow-hidden sm:w-[17rem] md:w-[18rem] lg:w-[18rem] p-5 text-white icon-box'
         data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
           data-aos-offset={isBigScreen ? '10' : '2'}>
