@@ -1,66 +1,68 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 const TextAnimation = () => {
   const [text, setText] = useState('');
+  const [currentPositionIndex, setCurrentPositionIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-  const fullText = `<div class='playwrite-au-nsw-text'><h1 class='text-white'>Hi, I'm <span class='green'>Abdulhamid Abdulsalam.</span></h1> <br/> <h3 class='text-white'>I'm a <span class='green'>full-stack developer</span></h3> </div>`;
-  const typingSpeed = 10; // Speed of typing in milliseconds
-  const erasingSpeed = 100; // Speed of erasing in milliseconds
-  const cursorBlinkSpeed = 200; // Speed of cursor blinking in milliseconds
+  const name = "Abdulhamid Abdulsalam";
+  const typingSpeed = 100; // Speed of typing in milliseconds
+  const eraseSpeed = 1000; // Speed of erasing in milliseconds
+  const pauseDuration = 15000; // Pause before erasing
+
+  const positions = useMemo(() => [
+    "Full-stack web Developer",
+    "Mobile Developer",
+    "Problem Solver",
+    "Tech Enthusiast"
+  ], []);
+
 
   useEffect(() => {
+    const currentPosition = positions[currentPositionIndex];
     let timer;
+    const baseText = `Hi, I'm ${name}. I'm a `;
+    
     if (isTyping) {
-      if (text.length < fullText.length) {
+      if (text.length < baseText.length + currentPosition.length) {
         timer = setTimeout(() => {
-          setText(fullText.slice(0, text.length + 1));
+          setText(prev => prev + (baseText + currentPosition)[prev.length]);
         }, typingSpeed);
       } else {
         setIsTyping(false);
         timer = setTimeout(() => {
           setIsTyping(true);
-        }, 1000); // Wait for 1 second before starting to erase
+        }, pauseDuration);
       }
     } else {
-      if (text.length > 0) {
+      if (text.length > baseText.length) {
         timer = setTimeout(() => {
-          setText(fullText.slice(0, text.length - 1));
-        }, erasingSpeed);
+          setText(prev => prev.slice(0, -1));
+        }, eraseSpeed);
       } else {
         setIsTyping(true);
-        timer = setTimeout(() => {
-          setIsTyping(false);
-        }, 1000); // Wait for 1 second before starting to type
+        setCurrentPositionIndex((prev) => (prev + 1) % positions.length);
       }
     }
 
     return () => clearTimeout(timer);
-  }, [text, isTyping, fullText]);
+  }, [text, currentPositionIndex, isTyping, positions, name]);
 
   return (
-    <div className=''>
-      <div style={{ display: 'inline-flex', alignItems: 'center' }}>
-        <motion.div
-          style={{ fontSize: '24px', fontWeight: 'bold' }}
-          animate={{ opacity: [0, 1], transition: { duration: 0.5 } }}
-          dangerouslySetInnerHTML={{ __html: text }} // Use this without children
-        />
-        <motion.div
-          style={{
-            fontSize: '24px',
-            fontWeight: 'bold',
-            marginLeft: '2px',
-            display: 'inline-block',
-          }}
-          animate={{
-            opacity: [0, 1, 0],
-            transition: { duration: cursorBlinkSpeed / 1000, repeat: Infinity },
-          }}
-        >
-          |
-        </motion.div>
-      </div>
+    <div className="text-white text-3xl font-bold">
+      <motion.span
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        {text}
+      </motion.span>
+      <motion.span
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ duration: 0.7, repeat: Infinity }}
+      >
+        |
+      </motion.span>
     </div>
   );
 };

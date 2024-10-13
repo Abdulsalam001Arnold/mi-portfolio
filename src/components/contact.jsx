@@ -32,14 +32,14 @@ export default function Contact(){
   </Reveal>
 
 
-    <h2 className='text-white playwrite-au-nsw-text text-2xl mt-[2rem]'data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+    <h2 className='text-white playwrite-au-nsw-text text-xl mt-[2rem]'data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
             data-aos-offset={isBigScreen ? '10' : '2'}>
         Contact Information
     </h2>
 
     <div className='text-white px-4 flex flex-col items-center justify-center mt-[2rem]'>
 
-    <ul className='text-[18px] margarine-regular px-4 flex flex-col items-center justify-center gap-5'>
+    <ul className='text-[18px] margarine-regular px-2 lg:px-4 flex flex-col items-center justify-center gap-1 md:gap-2 lg:gap-5'>
 
     <Reveal>
         <li>
@@ -68,14 +68,14 @@ export default function Contact(){
     </div>
 
 
-    <h2 className='text-white playwrite-au-nsw-text text-2xl mt-[2rem]'data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+    <h2 className='text-white playwrite-au-nsw-text text-xl mt-[2rem]'data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
             data-aos-offset={isBigScreen ? '10' : '2'}>
         Connect with me
     </h2>
 
-    <div className='text-white px-4 flex flex-col items-center justify-center mt-[2rem]'>
+    <div className='text-white px-2 flex flex-col items-center justify-center mt-[2rem]'>
 
-    <ul className='text-[18px] margarine-regular px-4 flex flex-col items-center justify-center gap-5'>
+    <ul className='text-[18px] margarine-regular px-3 flex flex-col items-center justify-center gap-5'>
 
     <Reveal>
         <li>
@@ -87,7 +87,7 @@ export default function Contact(){
 
         <Reveal>
         <li>
-        <Link to='https://x.com/Abdul_Lanre001?t=QlSIMl2t1xF1zpa8Xn6wuA&s=08'>
+        <Link to='https://x.com/Abdul_Lanre001?t=qx5JMSagM_F_vAwG7i-Y5Q&s=08'>
             Twitter: @Abdul_Lanre001
             </Link>
         </li>
@@ -102,7 +102,7 @@ export default function Contact(){
 
         <Reveal>
         <li>
-        <Link to='https://www.linkedin.com/in/abdulhamid-abdulsalam-460a55321'>
+        <Link to='https://www.linkedin.com/in/abdulhamid-abdulsalam-ba3634331'>
             LinkedIn: AbdulHamid Abdulsalam
             </Link>
         </li>

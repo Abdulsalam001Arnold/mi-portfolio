@@ -68,3 +68,108 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+ {/* Menu for Both Small and Large Screens */}
+        <div
+          className={``}
+        >
+          {/* Close Button for Small Screens */}
+          <div className="flex justify-between items-center lg:hidden">
+            <button onClick={toggleNavbar} className="text-white focus:outline-none">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          {/* Navbar Links */}
+          <ul className="lg:flex lg:space-x-6 text-white text-center lg:text-left">
+            {/* Home */}
+            <li className='flex flex-col items-center justify-center gap-1 text-6xl md:text-4xl lg:text-[14px] mb-6 md:mb-5 lg:mb-0'>
+              <Link
+                to="/"
+                className="block py-2 px-4 links relative margarine-regular"
+              >
+                Home
+                <span
+                  className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
+                    location.pathname === '/' ? 'w-full' : 'hover:w-full w-0'
+                  }`}
+                ></span>
+              </Link>
+            </li>
+
+            {/* About */}
+            <li className='flex flex-col items-center justify-center gap-1 text-6xl md:text-4xl lg:text-[14px] mb-6 md:mb-5 lg:mb-0'>
+              <Link
+                to="/about"
+                className="block py-2 px-4 links relative margarine-regular"
+              >
+                About
+                <span
+                  className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
+                    location.pathname === '/about' ? 'w-full' : 'hover:w-full w-0'
+                  }`}
+                ></span>
+              </Link>
+            </li>
+
+            {/* Projects */}
+            <li className='flex flex-col items-center justify-center gap-1 text-6xl md:text-4xl lg:text-[14px] mb-6 md:mb-5 lg:mb-0'>
+              <Link
+                to="/projects"
+                className="block py-2 px-4 links relative margarine-regular"
+              >
+                My Projects
+                <span
+                  className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
+                    location.pathname === '/projects' ? 'w-full' : 'hover:w-full w-0'
+                  }`}
+                ></span>
+              </Link>
+            </li>
+
+            {/* Services */}
+            <li className='flex flex-col items-center justify-center gap-1 text-6xl md:text-4xl lg:text-[14px]'>
+              <Link
+                to="/services"
+                className="block py-2 px-4 links relative margarine-regular"
+              >
+                Services
+                <span
+                  className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
+                    location.pathname === '/services' ? 'w-full' : 'hover:w-full w-0'
+                  }`}
+                ></span>
+              </Link>
+            </li>
+
+            {/* Contact */}
+            <li className='flex flex-col items-center justify-center gap-1 text-6xl md:text-4xl lg:text-[14px]'>
+              <Link
+                to="/contact"
+                className="block py-2 px-4 links relative margarine-regular"
+              >
+                Contact
+                <span
+                  className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
+                    location.pathname === '/contact' ? 'w-full' : 'hover:w-full w-0'
+                  }`}
+                ></span>
+              </Link>
+            </li>
+          </ul>
+        </div>

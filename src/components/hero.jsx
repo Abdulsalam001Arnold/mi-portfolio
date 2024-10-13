@@ -7,19 +7,17 @@ import { useInView } from 'react-intersection-observer';
 import Photo from './Photo';
 import { Link } from 'react-router-dom';
 import Reveal from './Reveal';
-
 import NumberCounter from './count'
 
 export default function Hero() {
     const { ref, inView } = useInView({
         triggerOnce: true, // Only trigger once
-        threshold: 0.1, // Trigger when 10% of the component is in view
+        threshold: 0.2, // Trigger when 20% of the component is in view
       });
     
     return(
-        <div className='w-full h-full mt-[1.4rem] flex flex-col items-center justify-center relative z-[1]'>
-            <div className='flex flex-col-reverse md:flex-col-reverse lg:flex-row items-center justify-center gap-9'>
-
+        <div className='w-full h-full mt-[1.4rem] flex flex-col items-center justify-center relative z-0'>
+            <div className='flex w-full flex-col-reverse md:flex-col-reverse lg:flex-row items-center justify-center gap-9'>
 
             <div className='flex flex-col items-center md:items-center lg:items-start justify-center md:justify-normal lg:justify-normal sm:w-full md:w-full lg:w-[31rem]'>
             <Reveal>
@@ -29,14 +27,14 @@ export default function Hero() {
                 </Reveal>
                 
 
-                <div className='sm:w-[60%] md:w-full lg:w-full px-5 md:px-0 lg:px-0 text-center md:text-center lg:text-start'>
+                <div className='sm:w-[60%] h-[10rem] md:h-[4rem] lg:h-[5rem] md:w-full lg:w-full px-5 md:px-0 lg:px-0 text-center md:text-center lg:text-start mb-1 md:mb-1 lg:mb-1 mt-1 md:mt-1 lg:mt-1'>
                 <TextAnimation />
                 </div>
 
                 <Reveal>
-                <div className='w-full md:w-full'>
-                <p className='text-sm w-full text-center mt-[1rem] text-white playwrite-au-nsw-text'>
-                I build responsive, user-friendly web applications using modern technologies and I believe in writing clean, maintainable code and delivering products that not only meet but exceed client expectations.
+                <div className='w-full md:w-full mt-2'>
+                <p className='text-sm w-full text-center text-white playwrite-au-nsw-text'>
+                I build responsive, user-friendly web and mobile applications using modern technologies and I believe in writing clean, maintainable code and delivering products that not only meet but exceed client expectations.
                 </p>
                 </div>
                 </Reveal>
@@ -58,7 +56,7 @@ export default function Hero() {
                     </Link>
 
 
-                    <Link to='https://www.linkedin.com/in/abdulhamid-abdulsalam-460a55321'>
+                    <Link to='https://www.linkedin.com/in/abdulhamid-abdulsalam-ba3634331'>
                     <div className='icons p-2'>
 
                     <FaLinkedin className='' />
@@ -66,7 +64,7 @@ export default function Hero() {
                     </Link>
 
 
-                    <Link to='https://x.com/Abdul_Lanre001?t=QlSIMl2t1xF1zpa8Xn6wuA&s=08'>
+                    <Link to='https://x.com/Abdul_Lanre001?t=qx5JMSagM_F_vAwG7i-Y5Q&s=08'>
                     <div className='icons p-2'>
                     <BsTwitterX className='' />
                     </div>
@@ -75,42 +73,40 @@ export default function Hero() {
                 </Reveal>
             </div>
             
-            <div className='order-1 lg:order-none mb-8 lg:mb-0'>
+            <div className='order-1 w-full md:w-fit lg:w-fit lg:order-none mb-8 lg:mb-0 flex-col items-center justify-center'>
             <Photo/>
             </div>
-
-
             </div>
 
 
             {/* container */}
             <div className='w-full mt-[2rem] flex justify-center items-center text-white'>
             <Reveal>
-            <div className='w-fit grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-5 md:gap-10 lg:gap-20'>
+            <div className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-3 md:gap-10 lg:gap-20 px-3'>
 
-            <div className='flex items-center justify-center w-fit gap-3'>
+            <div className='flex items-center justify-center gap-3'>
                 <h4 ref={ref} className='text-6xl dancing-script-topic'><NumberCounter inView={inView} targetNumber={2} duration={100}/></h4>
                 <p className='text-xs margarine-regular'>
                     Years of <br/> experience
                 </p>
             </div>
 
-            <div className='flex items-center justify-center w-fit gap-3'>
+            <div className='flex items-center justify-center gap-3'>
                 <h4 className='text-6xl dancing-script-topic'><NumberCounter inView={inView} targetNumber={4} duration={200}/></h4>
                 <p className='text-xs margarine-regular'>
                     Major projects<br/>completed
                 </p>
             </div>
 
-            <div className='flex items-center justify-center w-fit gap-3'>
-                <h4 className='text-6xl dancing-script-topic'><NumberCounter inView={inView} targetNumber={9} duration={400}/></h4>
+            <div className='flex items-center justify-center gap-3'>
+                <h4 className='text-6xl dancing-script-topic'><NumberCounter inView={inView} targetNumber={10} duration={400}/></h4>
                 <p className='text-xs margarine-regular'>
                     Technologies <br/> mastered
                 </p>
             </div>
 
-            <div className='flex items-center justify-center w-fit gap-3'>
-                <h4 className='text-6xl dancing-script-topic'><NumberCounter inView={inView} targetNumber={289} duration={4000}/></h4>
+            <div className='flex items-center justify-center gap-3'>
+                <h4 className='text-6xl dancing-script-topic'><NumberCounter inView={inView} targetNumber={189} duration={4000}/></h4>
                 <p className='text-xs margarine-regular'>
                     Codes<br/> committed
                 </p>

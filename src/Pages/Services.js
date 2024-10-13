@@ -22,7 +22,7 @@ export default function Servicespage() {
       return <Load />;
     }
     return(
-        <div className="h-full w-full relative z-0">
+        <div className="min-h-screen w-full relative z-0 pt-[4rem]">
         <BackgroundAnimation/>
         <Services/>
         </div>

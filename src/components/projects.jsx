@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import { useMediaQuery } from 'react-responsive';
 import Reveal from './Reveal';
-import project from '../assets/project1.png'
 import project3 from '../assets/project3.png'
-
 import project2 from '../assets/project2.png'
 import project4 from '../assets/project4.png'
 
