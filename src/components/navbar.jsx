@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -9,6 +9,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   const location = useLocation();
+  const menuRef = useRef(null);
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -25,6 +26,26 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+    // Close the mobile menu on page change
+    useEffect(() => {
+      setIsOpen(false);
+    }, [location]);
+  
+    // Close the mobile menu when clicking outside of it
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+          setIsOpen(false);
+        }
+      };
+  
+      window.addEventListener('mousedown', handleClickOutside);
+  
+      return () => {
+        window.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, []);
 
   return (
     <motion.nav className={`bg-[rgb(29,28,34)] p-2 w-full fixed top-0 z-[60] ${
@@ -104,6 +125,7 @@ const Navbar = () => {
 
         {/* Side panel for mobile */}
         <div
+        ref={menuRef}
           className={`fixed top-0 left-0 w-64 h-full bg-[rgb(29,28,34)] text-white transform ${
             isOpen ? 'translate-x-0 absolute z-50' : '-translate-x-full'
           } transition-transform duration-300 ease-in-out md:hidden`}

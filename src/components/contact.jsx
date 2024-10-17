@@ -43,7 +43,7 @@ export default function Contact(){
 
     <Reveal>
         <li>
-            Email: abdulsalamabulhamidarnold@gmail.com
+            Email: abdulsalamabdulhamidlanre@gmail.com
         </li>
         </Reveal>
 

@@ -12,7 +12,7 @@ import NumberCounter from './count'
 export default function Hero() {
     const { ref, inView } = useInView({
         triggerOnce: true, // Only trigger once
-        threshold: 0.2, // Trigger when 20% of the component is in view
+        threshold: 0.6, // Trigger when 60% of the component is in view
       });
     
     return(
