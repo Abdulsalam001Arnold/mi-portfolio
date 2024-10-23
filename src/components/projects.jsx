@@ -8,6 +8,7 @@ import Reveal from './Reveal';
 import project3 from '../assets/project3.png'
 import project2 from '../assets/project2.png'
 import project4 from '../assets/project4.png'
+import video from '../assets/Archbuild __ Architectural Website - Google Chrome 2024-10-23 15-25-00.mp4'
 
 
 
@@ -38,10 +39,33 @@ export default function Project(){
             </Reveal>
 
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center justify-center mt-[4rem] gap-5 md:gap-9 lg:gap-14 px-2'>
+            <div className='flex flex-col items-center justify-center mt-[4rem] gap-5 md:gap-9 lg:gap-14 px-2'>
 
-            <Link to='https://login-nu-snowy.vercel.app'>
-            <div className='flex flex-col items-center justify-center gap-4 md:gap-5 lg:gap-10 mb-[0.56rem] overflow-hidden sm:w-[17rem] md:w-[18rem] lg:w-[18rem] p-5 bg-[rgb(24,24,24)] text-white icon-box'
+            <Link to='https://archbuild.vercel.app/'>
+
+          <div className='flex flex-col md:flex-row lg:flex-row items-center justify-center gap-3'>
+            <video loop={true} autoPlay={true} className='w-[36rem] rounded-[20px]'>
+             <source src={video} type='video/mp4'></source>
+            </video>
+
+            <motion.div className='px-4 border-[1.5px] shadow-md border-transparent rounded-[20px] w-[18rem] transition-all duration-600 py-4 flex-col'
+      data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+      data-aos-offset={isBigScreen ? '2' : '2'}
+      >
+          <div className='flex-col gap-3'>
+          {/* <FaCodeBranch className='text-green-500 text-xl md:text-5xl lg:text-7xl'/> */}
+            <div className='h-[4px] w-[26px] rounded-lg mt-3 bg-green-500'></div>
+          </div>
+
+          <div className='mt-3 md:mt-4 lg:mt-7 flex-col items-center justify-center'>
+          <h3 className='text-white mb-1 md:mb-3 lg:mb-4 dancing-script-topic text-lg md:text-xl lg:text-2xl'>Architectural website:</h3>
+
+          <p className='text-white margarine-regular text-sm md:text-lg lg:text-xl w-full'>A modern architectural website built with React, showcasing a variety of architectural projects with interactive features and a sleek design.Also involving: Responsive Design, Project Gallery, People's Gallery, Detailed Project Pages. Detailed People's Pages, Contact Form, Animation and Transitions.</p>
+          </div>
+      </motion.div>
+          </div>
+
+            {/* <div className='flex flex-col items-center justify-center gap-4 md:gap-5 lg:gap-10 mb-[0.56rem] overflow-hidden sm:w-[17rem] md:w-[18rem] lg:w-[18rem] p-5 bg-[rgb(24,24,24)] text-white icon-box'
         data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
           data-aos-offset={isBigScreen ? '10' : '2'}>
         <div className='relative'>
@@ -63,41 +87,15 @@ export default function Project(){
                   <p><strong>Technologies Used:</strong> React, Tailwindcss, HTML, CSS</p>
                  </Reveal>
                 </div>
-                </div>
+                </div> */}
                 </Link>
 
 
-              <Link to='https://archbuild.vercel.app/'>
-                <div className='flex flex-col items-center justify-center gap-4 md:gap-5 lg:gap-10 mb-[0.56rem] overflow-hidden sm:w-[17rem] md:w-[18rem] lg:w-[18rem] p-5 text-white icon-box'
-        data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
-          data-aos-offset={isBigScreen ? '10' : '2'}>
-        <div className='relative'>
-                <motion.img src={project2} alt='return of the city' className='w-full h-auto flex-shrink-0 img-hero' 
-                  initial={{opacity: 0}} 
-                animate={{opacity: 1}} 
-                transition={{delay: 1.5, ease: 'easeOut', duration: 1.5}}
-                />
-                <div className='overlay'>
-                
-                </div>
-                </div>
-                <div className="mt-[0.5rem]">
 
-                <h4 className='text-xs uppercase dancing-script-topic mb-2'>Architectural website</h4>
-                <Reveal>
-                  <p className="text-sm font-extralight margarine-regular">A modern architectural website built with React, showcasing a variety of architectural projects with interactive features and a sleek design.Also involving: Responsive Design, Project Gallery, People's Gallery, Detailed Project Pages. Detailed People's Pages, Contact Form, Animation and Transitions.  </p>
-                </Reveal>
-                  
-                  <Reveal>
-                  <p className='mt-2'><strong>Technologies Used:</strong> React, CSS, HTML, Tailwind, API Integration, Framer-motion</p>
-                 </Reveal>
-                </div>
-                </div>
-                </Link>
 
 
                 <Link to='https://archbuild-api.vercel.app/'>
-                <div className='flex flex-col items-center justify-center gap-4 md:gap-5 lg:gap-10 mb-[0.56rem] overflow-hidden sm:w-[17rem] md:w-[18rem] lg:w-[18rem] p-5 text-white icon-box'
+                <div className='flex flex-col items-center justify-center gap-4 md:gap-5 lg:gap-10 mb-[0.56rem] overflow-hidden sm:w-[17rem] md:w-[18rem] lg:w-[18rem] p-5 text-white'
         data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
           data-aos-offset={isBigScreen ? '10' : '2'}>
         <div className='relative'>

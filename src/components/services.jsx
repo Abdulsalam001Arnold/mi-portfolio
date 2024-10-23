@@ -5,8 +5,15 @@ import 'aos/dist/aos.css'; // Import AOS styles
 import { useMediaQuery } from 'react-responsive';
 import Reveal from './Reveal';
 import { Link } from 'react-router-dom'
-
-
+import { FaCode } from "react-icons/fa";
+import { SiKotlin } from "react-icons/si";
+import { GrSwift } from "react-icons/gr";
+import { TbBrandReactNative } from "react-icons/tb";
+import { FaServer } from "react-icons/fa";
+import { FaDatabase } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { BsFillShieldLockFill } from "react-icons/bs";
+import { FaCodeBranch } from "react-icons/fa6";
 
 export default function Services(){
     useEffect(() => {
@@ -41,66 +48,123 @@ export default function Services(){
         <h2 className='text-2xl dancing-script-topic text-white playwrite-au-nsw-text' data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
         data-aos-offset={isBigScreen ? '10' : '2'}>Service Offerings</h2>
 
-<Reveal>
 
-        <div className="flex flex-col items-center justify-center md:justify-center lg:justify-start md:flex-col lg:flex-row gap-4">
-    <h3 className='text-white dancing-script-topic text-lg'>Full-Stack Web Development:</h3>
-    <div className='w-[80%] '>
-    <p className='text-white margarine-regular text-sm sm:w-full md:w-full lg:w-[66%]'>Creating robust, scalable web applications using React and Node.js. From dynamic front-end interfaces to powerful back-end systems, I build comprehensive solutions tailored to your needs.</p>
-    </div>
-  </div>
-  </Reveal>
+      <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
 
+      <motion.div className='px-4 border-[1.5px] shadow-md border-transparent rounded-[20px] hover:border-green-500 w-[18rem] transition-all duration-300 py-4 flex-col'
+      data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+      data-aos-offset={isBigScreen ? '2' : '2'}
+      >
+          <div className='flex-col gap-3'>
+            <FaCode className='text-green-500 text-xl md:text-5xl lg:text-7xl'/>
+            <div className='h-[4px] w-[26px] rounded-lg bg-green-500'></div>
+          </div>
 
-<Reveal>
-  <div className="flex flex-col items-center justify-center md:justify-center lg:justify-start md:flex-col lg:flex-row gap-3">
-    <h3 className='text-white dancing-script-topic text-lg'>Mobile App Development:</h3>
-    <div>
-    <p className='text-white margarine-regular text-sm sm:w-full md:w-full lg:w-[66%]'>Building seamless mobile applications with React Native for both iOS and Android. Delivering high-performance, cross-platform apps that provide an outstanding user experience.</p>
-    </div>
-  </div>
-  </Reveal>
+          <div className='mt-3 md:mt-4 lg:mt-7 flex-col items-center justify-center'>
+          <h3 className='text-white mb-1 md:mb-3 lg:mb-4 dancing-script-topic text-lg md:text-xl lg:text-2xl'>Full-Stack Web Development:</h3>
 
-    
-<Reveal>
-  <div className="flex flex-col items-center justify-center md:justify-center lg:justify-start md:flex-col lg:flex-row gap-3">
-    <h3 className='text-white dancing-script-topic text-lg'>API Development:</h3>
-    <div>
-    <p className='text-white margarine-regular text-sm sm:w-full md:w-full lg:w-[66%]'>Designing and implementing efficient and secure APIs with Node.js. Ensuring smooth integration and communication between your applications and third-party services.</p>
-    </div>
-  </div>
-  </Reveal>
+          <p className='text-white margarine-regular text-sm md:text-lg lg:text-xl w-full'>Creating robust, scalable web applications using React and Node.js. From dynamic front-end interfaces to powerful back-end systems, I build comprehensive solutions tailored to your needs.</p>
+          </div>
+      </motion.div>
 
 
+      <motion.div className='px-4 border-[1.5px] shadow-md border-transparent rounded-[20px] hover:border-green-500 w-[18rem] transition-all duration-300 py-4 flex-col'
+      data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+      data-aos-offset={isBigScreen ? '2' : '2'}
+      >
+          <div className='flex-col gap-3'>
+          <div className='flex gap-2'>
+          <TbBrandReactNative className='text-green-500 text-xl md:text-5xl lg:text-7xl'/>
+          <SiKotlin className='text-green-500 text-xl md:text-5xl lg:text-7xl'/>
+          <GrSwift className='text-green-500 text-xl md:text-5xl lg:text-7xl'/>
+          </div>
+            <div className='h-[4px] w-[26px] mt-3 rounded-lg bg-green-500'></div>
+          </div>
 
-<Reveal>
-  <div className="flex flex-col items-center justify-center md:justify-center lg:justify-start md:flex-col lg:flex-row gap-3">
-    <h3 className='text-white dancing-script-topic text-lg'>Server-Side Rendering:</h3>
-    <div>
-    <p className='text-white margarine-regular text-sm sm:w-full md:w-full lg:w-[66%]'>Enhancing web application performance and SEO with Next.js. Providing fast load times and improved search engine visibility for your web projects.</p>
-    </div>
-  </div>
-  </Reveal>
+          <div className='mt-3 md:mt-4 lg:mt-7 flex-col items-center justify-center'>
+          <h3 className='text-white mb-1 md:mb-3 lg:mb-4 dancing-script-topic text-lg md:text-xl lg:text-2xl'>Mobile App Development:</h3>
 
+          <p className='text-white margarine-regular text-sm md:text-lg lg:text-xl w-full'>As a versatile mobile developer, I build cross-platform using React Native leveraging the power of Typescript for spotless code. Additionally, I develop native features and enhance app performance using Swift for IOS and Kotlin for Android.</p>
+          </div>
+      </motion.div>
 
-<Reveal>
-  <div className="flex flex-col items-center justify-center md:justify-center lg:justify-start md:flex-col lg:flex-row gap-3">
-    <h3 className='text-white dancing-script-topic text-lg'>UI/UX Design:</h3>
-    <div>
-    <p className='text-white margarine-regular text-sm sm:w-full md:w-full lg:w-[66%]'>Crafting engaging and user-friendly interfaces with modern design principles. Focusing on creating intuitive and visually appealing user experiences.</p>
-    </div>
-  </div>
-  </Reveal>
+      <motion.div className='px-4 border-[1.5px] shadow-md border-transparent rounded-[20px] hover:border-green-500 w-[18rem] transition-all duration-300 py-4 flex-col'
+      data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+      data-aos-offset={isBigScreen ? '2' : '2'}
+      >
+          <div className='flex-col gap-3'>
+            <FaServer className='text-green-500 text-xl md:text-5xl lg:text-7xl'/>
+            <div className='h-[4px] w-[26px] rounded-lg bg-green-500'></div>
+          </div>
 
+          <div className='mt-3 md:mt-4 lg:mt-7 flex-col items-center justify-center'>
+          <h3 className='text-white mb-1 md:mb-3 lg:mb-4 dancing-script-topic text-lg md:text-xl lg:text-2xl'>API Development:</h3>
 
-<Reveal>
-  <div className="flex flex-col items-center justify-center md:justify-center lg:justify-start md:flex-col lg:flex-row gap-3">
-    <h3 className='text-white dancing-script-topic text-lg'>E-commerce Solutions:</h3>
-    <div>
-    <p className='text-white margarine-regular text-sm sm:w-full md:w-full lg:w-[66%]'>Developing secure and scalable e-commerce platforms.</p>
-    </div>
-  </div>
-  </Reveal>
+          <p className='text-white margarine-regular text-sm md:text-lg lg:text-xl w-full'>Designing and implementing efficient and secure APIs with Node.js. Ensuring smooth integration and communication between your applications and third-party services.</p>
+          </div>
+      </motion.div>
+
+      <motion.div className='px-4 border-[1.5px] shadow-md border-transparent rounded-[20px] hover:border-green-500 w-[18rem] transition-all duration-300 py-4 flex-col'
+      data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+      data-aos-offset={isBigScreen ? '2' : '2'}
+      >
+          <div className='flex-col gap-3'>
+          <div className='flex'>
+            <FaDatabase className='text-green-500 text-xl md:text-5xl lg:text-7xl'/>
+            <SiMongodb className='text-green-500 text-xl md:text-5xl lg:text-7xl'/>
+          </div>
+            <div className='h-[4px] w-[26px] rounded-lg mt-3 bg-green-500'></div>
+          </div>
+
+          <div className='mt-3 md:mt-4 lg:mt-7 flex-col items-center justify-center'>
+          <h3 className='text-white mb-1 md:mb-3 lg:mb-4 dancing-script-topic text-lg md:text-xl lg:text-2xl'> Database Management (MongoDB, 
+            Mongoose):</h3>
+
+          <p className='text-white margarine-regular text-sm md:text-lg lg:text-xl w-full'>Knowledgeable in designing and maintaining 
+databases using MongoDB, with experience using 
+Mongoose for schema-based data modeling and 
+efficient querying.</p>
+          </div>
+      </motion.div>
+
+      <motion.div className='px-4 border-[1.5px] shadow-md border-transparent rounded-[20px] hover:border-green-500 w-[18rem] transition-all duration-300 py-4 flex-col'
+      data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+      data-aos-offset={isBigScreen ? '2' : '2'}
+      >
+          <div className='flex-col gap-3'>
+          <BsFillShieldLockFill className='text-green-500 text-xl md:text-5xl lg:text-7xl'/>
+            <div className='h-[4px] w-[26px] rounded-lg mt-3 bg-green-500'></div>
+          </div>
+
+          <div className='mt-3 md:mt-4 lg:mt-7 flex-col items-center justify-center'>
+          <h3 className='text-white mb-1 md:mb-3 lg:mb-4 dancing-script-topic text-lg md:text-xl lg:text-2xl'> Authentication & Authorization:</h3>
+
+          <p className='text-white margarine-regular text-sm md:text-lg lg:text-xl w-full'>Expertise in implementing secure authentication 
+methods using JWT, Firebase, Clerk, and social 
+logins (Google, Facebook) via Passport.</p>
+          </div>
+      </motion.div>
+
+      <motion.div className='px-4 border-[1.5px] shadow-md border-transparent rounded-[20px] hover:border-green-500 w-[18rem] transition-all duration-600 py-4 flex-col'
+      data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+      data-aos-offset={isBigScreen ? '2' : '2'}
+      >
+          <div className='flex-col gap-3'>
+          <FaCodeBranch className='text-green-500 text-xl md:text-5xl lg:text-7xl'/>
+            <div className='h-[4px] w-[26px] rounded-lg mt-3 bg-green-500'></div>
+          </div>
+
+          <div className='mt-3 md:mt-4 lg:mt-7 flex-col items-center justify-center'>
+          <h3 className='text-white mb-1 md:mb-3 lg:mb-4 dancing-script-topic text-lg md:text-xl lg:text-2xl'>Version Control and Deployment:</h3>
+
+          <p className='text-white margarine-regular text-sm md:text-lg lg:text-xl w-full'> Proficient in Git, utilizing it for version control and 
+collaborating with other developers.
+ Experience deploying and managing applications 
+using cloud services like Firebase and AWS for 
+hosting, authentication, and database management.</p>
+          </div>
+      </motion.div>
+      </div>
         </div>
 
 <Reveal>
