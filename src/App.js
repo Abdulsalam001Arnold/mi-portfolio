@@ -1,28 +1,28 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from './components/navbar';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Projectpage from './Pages/Projects';
-import ContactPage from './Pages/Contact';
-import ServicesPage from './Pages/Services';
-
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/navbar";
+import Load from "./components/load";
+import { Suspense, lazy } from "react";
 
 function App() {
+  const Home = lazy(() => import("./Pages/Home"));
+  const About = lazy(() => import("./Pages/About"));
+  const Projectpage = lazy(() => import("./Pages/Projects"));
+  const ContactPage = lazy(() => import("./Pages/Contact"));
+  const ServicesPage = lazy(() => import("./Pages/Services"));
+
   return (
-    <div className='bg-[rgb(29,28,34)]'>
+    <div className="bg-[rgb(29,28,34)]">
       <BrowserRouter>
-      <Navbar/>
-        <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/projects' element={<Projectpage/>}/>
-        <Route path='/contact' element={<ContactPage/>}/>
-        <Route path='/services' element={<ServicesPage/>}/>
-
-
-
-        </Routes>
+        <Suspense fallback={<Load/>}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projectpage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </div>
   );
