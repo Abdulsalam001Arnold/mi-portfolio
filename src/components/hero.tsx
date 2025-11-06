@@ -1,9 +1,6 @@
 
 'use client';
 import React, { useRef } from 'react';
-import { IoLogoGithub, IoLogoInstagram } from "react-icons/io";
-import { FaLinkedin, FaTiktok } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 import gsap from 'gsap';
@@ -129,6 +126,15 @@ export default function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
             </svg>
         </motion.a>
+
+
+        <motion.button className={'bg-transparent text-white hover:bg-green-400 hover:text-white transition-all duration-200 border-1 border-green-400 p-5 w-[10rem] mt-[3rem]'}
+        whileHover={{ scale: 1.1 }}
+        >
+            <Link href={'https://calendly.com/abdulsalamabulhamidarnold/30min'} target='_blank' className='font-bold py-2 px-4 rounded-full mt-[3rem]'>
+                Book a Call
+            </Link>
+        </motion.button>
     </div>
   );
 }
