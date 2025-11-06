@@ -25,6 +25,7 @@ import { SiClerk } from "react-icons/si";
 import { SiPassport } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiMongoose } from "react-icons/si";
+import Experience from "@/components/Experience";
 
 export default function Info() {
   const [offset, setOffset] = useState(2)
@@ -47,61 +48,88 @@ export default function Info() {
         About me
       </h1>
 
-      <div className="flex flex-col items-center md:items-center lg:items-start justify-center md:justify-normal lg:justify-normal mt-[3rem] px-4 text-[16px] md:text-[20px] lg:text-[25px]">
-        <Reveal>
-          <h1 className="text-white margarine-regular">
-            Hello, I'm <span className="green">Abdulhamid Abdulsalam</span> – a
-            Passionate Full-Stack Web Developer.
-          </h1>
-        </Reveal>
-        <h1 className="text-xl dancing-script-topic text-white links mt-[1rem] text-[16px] md:text-[20px] lg:text-[25px]">
-          My Journey
-        </h1>
-        <Reveal>
-          <p className="text-white margarine-regular sm:w-full md:w-full lg:w-[76%] mt-[0.4rem]">
-          I’m a full-stack web developer with a strong focus on building scalable, performant, and user-centric web applications. My journey began two years ago, and since then I’ve dedicated myself to constant growth, solving real-world problems, and keeping pace with the ever-evolving tech landscape.{" "}
-            <FaFaceSmileBeam className="text-white inline" />.
-          </p>
-        </Reveal>
+        <div className="mt-[2rem]">
+            <h1 className="text-xl dancing-script-topic text-white links mt-[1rem] text-[16px] md:text-[20px] lg:text-[25px]">
+                My Journey
+            </h1>
 
-        <Reveal>
-          <p className="text-white margarine-regular sm:w-full md:w-full lg:w-[76%] mt-[1rem]">
-          Along the way, I became self-taught in TypeScript and Next.js, mastering them through hands-on projects and real-world challenges. These technologies have become some of my strongest tools for delivering production-ready applications and clean, maintainable code.
-          </p>
-        </Reveal>
+            <p className="text-white margarine-regular sm:w-full md:w-full lg:w-[76%] mt-[0.4rem]">
+                From curious beginner to instructor — my journey in tech has been all about
+                learning, building, and sharing knowledge.
+            </p>
 
-        <Reveal>
-          <div className="text-white margarine-regular sm:w-full md:w-full lg:w-[76%] mt-[1rem]">
-          One of the pivotal milestones in my journey was a 6-month internship with a tech company, where I built critical platform features including:
+            {/* Timeline Container */}
+            <div className="relative mt-10 pl-6 space-y-12">
+                {/* Codar Institute */}
+                <div className="relative border-l border-gray-700 pl-6">
+                    <div className="absolute -left-[8px] top-[-12px] w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
+                    <h2 className="text-white text-xl font-semibold">Codar Institute, Lagos</h2>
+                    <p className="text-gray-400 text-sm mb-1">2023 - 2024</p>
+                    <p className="text-gray-300 leading-relaxed margarine-regular">
+                        I began my coding journey at <span className="text-white font-medium">Codar Institute</span>,
+                        where I learned the fundamentals of web development and built a solid
+                        foundation in HTML, CSS, and JavaScript. This period sparked my passion
+                        for creating things that live on the web.
+                    </p>
+                </div>
 
-          <ul className="flex flex-col gap-[10px]">
-            <li>APIs for Google and Facebook sign-up.</li>
-            <li>OAuth authentication flows.</li>
-            <li>A file upload system for user-generated content.</li>
-            <li>A profile-fetching API for efficient user access and updates.</li>
-          </ul>
-          </div>
-        </Reveal>
+                {/* Self-taught Growth */}
+                <div className="relative border-l border-gray-700 pl-6">
+                    <div className="absolute -left-[8px] top-[-12px] w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                    <h2 className="text-white text-xl font-semibold">Self-taught Developer</h2>
+                    <p className="text-gray-400 text-sm mb-1">2024</p>
+                    <p className="text-gray-300 leading-relaxed margarine-regular">
+                        After my foundation at Codar, I continued to learn independently — diving
+                        deep into <span className="text-white font-medium">React, TypeScript, and Next.js</span>.
+                        I spent months researching, building projects, and debugging through
+                        real-world challenges. This is where I transformed curiosity into skill.
+                    </p>
+                </div>
 
-        <Reveal>
-          <p className="text-white margarine-regular sm:w-full md:w-full lg:w-[76%] px-1 mt-[1rem]">
-          My performance led directly to a full-time role, where I’ve continued to design, develop, and ship impactful features while collaborating with teams to build reliable systems at scale.
-          </p>
-        </Reveal>
+                {/* Internship - Cloud Enthusiast */}
+                <div className="relative border-l border-gray-700 pl-6">
+                    <div className="absolute -left-[8px] top-[-12px] w-4 h-4 bg-yellow-500 rounded-full animate-pulse"></div>
+                    <h2 className="text-white text-xl font-semibold">Cloud Enthusiast</h2>
+                    <p className="text-gray-400 text-sm mb-1">Intern → Developer | 2024 - 2025</p>
+                    <p className="text-gray-300 leading-relaxed margarine-regular">
+                        I joined <span className="text-white font-medium">Cloud Enthusiast</span> as an intern,
+                        and through dedication and results, I earned a full-time role. During this
+                        period, I built scalable apps, contributed to the backend, and was deeply
+                        involved in team debugging sessions — leveling up as a true software
+                        engineer.
+                    </p>
+                </div>
 
-        <Reveal>
-          <p className="text-white margarine-regular sm:w-full md:w-full lg:w-[76%] px-1 mt-[1rem]">
-          In parallel, I’ve worked as a Coding/IT Instructor, where I teach and mentor aspiring developers. My ability to simplify complex concepts, debug effectively, and guide learners has helped students grow in confidence and even land their first roles. This role sharpened my communication skills and opened doors to freelance and mentorship opportunities.
-          </p>
-        </Reveal>
+                {/* Bloomy Technologies */}
+                <div className="relative border-l border-gray-700 pl-6">
+                    <div className="absolute -left-[8px] top-[-12px] w-4 h-4 bg-purple-500 rounded-full animate-pulse"></div>
+                    <h2 className="text-white text-xl font-semibold">Bloomy Technologies</h2>
+                    <p className="text-gray-400 text-sm mb-1">Instructor / Mentor | 2025 - Present</p>
+                    <p className="text-gray-300 leading-relaxed margarine-regular">
+                        Transitioning into a mentor role, I’ve helped aspiring developers unlock
+                        their potential and land their first opportunities. Teaching at
+                        <span className="text-white font-medium"> Bloomy</span> revealed a new passion —
+                        guiding others through code while refining my own understanding of software
+                        design and communication.
+                    </p>
+                </div>
 
-        <Reveal>
-          <p className="text-white margarine-regular sm:w-full md:w-full lg:w-[76%] px-1 mt-[1rem]">
-          Today, I see myself not just as a developer, but as a problem solver and continuous learner. From crafting robust APIs to building intuitive interfaces, I thrive at the intersection of frontend precision and backend logic. My next chapter is about expanding further into advanced system design, cloud services, and AI-powered applications.
-          </p>
-        </Reveal>
-      </div>
+                {/* Ongoing Growth */}
+                <div className="relative border-l border-gray-700 pl-6">
+                    <div className="absolute -left-[8px] top-[-12px] w-4 h-4 bg-pink-500 rounded-full animate-pulse"></div>
+                    <h2 className="text-white text-xl font-semibold">Still Growing...</h2>
+                    <p className="text-gray-400 text-sm mb-1">Present & Beyond</p>
+                    <p className="text-gray-300 leading-relaxed margarine-regular">
+                        My journey is far from over — I’m continuously expanding my expertise in
+                        <span className="text-white font-medium"> cloud services, system design, and AI-powered applications</span>.
+                        Every project sharpens my craft and prepares me for greater challenges ahead.
+                    </p>
+                </div>
+            </div>
+        </div>
 
+
+        <Experience/>
       <h1
         className="text-2xl margarine-regular text-white links mt-[4rem]"
         data-aos={isBigScreen ? "fade-up" : "fade-up"}
@@ -168,8 +196,7 @@ export default function Info() {
       <ul className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center justify-center mt-[4rem] gap-4 md:gap-7 lg:gap-14">
         <li
           className="flex flex-col items-center justify-center"
-          data-aos={isBigScreen ? "fade-up" : "fade-up"}
-          data-aos-offset={isBigScreen ? "10" : "1"}>
+          >
           <div className="icon-box p-5">
             <TiHtml5 className="text-white text-[7rem]" />
           </div>

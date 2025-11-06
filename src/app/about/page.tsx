@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import BackgroundAnimation from "@/components/background";
 
 
+
 export const metadata: Metadata = {
     title: 'Get to know me! :)',
     description: 'About me page'

@@ -32,7 +32,7 @@ const Loader = () => {
       }, []);
     
   return (
-    <div className="w-full relative z-10 bg-black/70 min-h-screen flex flex-col items-center justify-center inset-0">
+    <div className="w-full relative z-10 min-h-screen flex flex-col items-center justify-center inset-0">
       <div className="honeycomb">
         <div></div>
         <div></div>

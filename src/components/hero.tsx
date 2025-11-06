@@ -13,7 +13,7 @@ import Photo from './Photo';
 import SocialLinks from './SocialLinks';
 import Reveal from './Reveal';
 import NumberCounter from './count';
-
+import {motion} from "framer-motion";
 gsap.registerPlugin(useGSAP);
 
 
@@ -111,6 +111,24 @@ export default function Hero() {
           </div>
         </Reveal>
       </div>
+        <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href="/Abdulsalam-Abdulhamid.pdf"
+            download="Abdulsalam_Abdulhamid_CV.pdf"
+            className="inline-flex items-center mt-[3rem] gap-2 px-6 py-3 bg-gray-700 hover:bg-gray-900 hover:text-green-300 text-green-500 font-medium rounded-xl shadow-lg hover:shadow-xl transition-all"
+        >
+            <span>Download CV</span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+            </svg>
+        </motion.a>
     </div>
   );
 }

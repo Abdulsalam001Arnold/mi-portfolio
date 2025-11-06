@@ -6,8 +6,7 @@ import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ToastContainer, toast } from "react-toastify";
 import Loader from "./Loader";
-import { FaRegHandshake } from "react-icons/fa";
-import { IoRocketOutline } from "react-icons/io5";
+
 
 export default function ContactForm() {
   const formRef = useRef<HTMLDivElement>(null);
@@ -229,7 +228,7 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name */}
           <div>
-            <label htmlFor="title" className="block text-sm font-medium mb-2">
+            <label htmlFor="title" className="block text-sm font-medium mb-2 text-black">
               Name
             </label>
             <input
@@ -246,7 +245,7 @@ export default function ContactForm() {
 
           {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-2">
+            <label htmlFor="email" className="block text-sm font-medium mb-2 text-black">
               Email
             </label>
             <input
@@ -263,7 +262,7 @@ export default function ContactForm() {
 
           {/* Message */}
           <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-2">
+            <label htmlFor="message" className="block text-sm font-medium mb-2 text-black">
               Message/Suggestions
             </label>
             <textarea
