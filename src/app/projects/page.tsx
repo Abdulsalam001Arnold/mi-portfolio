@@ -14,7 +14,7 @@ export default function page() {
     <main className="w-full min-h-screen flex flex-col items-center justify-center bg-black/70 pt-[4rem] pb-[1.5rem]">
       <BackgroundAnimation />
       <h1 className="text-6xl dancing-script-topic text-white links">
-        Projects (personal)
+        Projects
       </h1>
 
       <Reveal>
