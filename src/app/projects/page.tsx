@@ -51,6 +51,43 @@ export default function page() {
           />
         </Reveal>
 
+
+        <Reveal>
+          <ProjectCard
+            title="De-gemini "
+            description="A fully operational cleaning services platform serving thousands of active users, allowing them to:
+
+Book services and choose preferred time slots for appointments.
+
+Pay securely using integrated payment gateways (Stripe/Paystack).
+
+Authenticate and authorize with secure user accounts (JWT-based flows).
+
+Locate services by entering their postcode for accurate and timely delivery.
+
+Manage bookings through an intuitive and optimized user interface.
+
+The application is highly optimized for performance and scalability, handling thousands of users while maintaining smooth and responsive interactions. This project demonstrates real-world, end-to-end full-stack development, including frontend UI, backend APIs, database management, payment integration, and secure cloud deployment.
+
+It showcases my ability to deliver production-ready, scalable solutions that provide real value to users."
+            technologies={[
+              "Git",
+              "React.js",
+              "Typescript",
+              "Axios",
+              "Mongo DB",
+              "Tailwindcss",
+              "GSAP",
+              "Stripe",
+              "Zustand",
+              "Framer-motion",
+            ]}
+            video="https://res.cloudinary.com/dqpbdik90/video/upload/v1763141733/de-gemini_a0ewkx.mp4"
+            link="https://degeminiservices.co.uk"
+          />
+        </Reveal>
+
+
         <Reveal>
           <ProjectCard
             title="FOTO-C APP"
