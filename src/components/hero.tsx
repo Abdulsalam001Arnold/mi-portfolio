@@ -111,7 +111,11 @@ export default function Hero() {
         <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
             href="/Abdulsalam-Abdulhamid.pdf"
+=======
+            href="/Abdulsalam-Abdulhamid-Lanre-frontendCV.pdf"
+>>>>>>> 5927502 (restored project)
             download="Abdulsalam_Abdulhamid_CV.pdf"
             className="inline-flex items-center mt-[3rem] gap-2 px-6 py-3 bg-gray-700 hover:bg-gray-900 hover:text-green-300 text-green-500 font-medium rounded-xl shadow-lg hover:shadow-xl transition-all"
         >
