@@ -86,17 +86,17 @@ export default function Hero() {
 
             <div className='flex items-center justify-center gap-3'>
               <h4 ref={ref} className='text-6xl dancing-script-topic'>
-                <NumberCounter inView={inView} targetNumber={2} duration={100} />
+                <NumberCounter inView={inView} targetNumber={3} duration={100} />
               </h4>
               <p className='text-xs margarine-regular'>Years of <br /> experience</p>
             </div>
 
-            <div className='flex items-center justify-center gap-3'>
+            {/* <div className='flex items-center justify-center gap-3'>
               <h4 className='text-6xl dancing-script-topic'>
                 <NumberCounter inView={inView} targetNumber={4} duration={200} />
               </h4>
               <p className='text-xs margarine-regular'>Major projects<br />completed</p>
-            </div>
+            </div> */}
 
             <div className='flex items-center justify-center gap-3'>
               <h4 className='text-6xl dancing-script-topic'>
@@ -111,7 +111,7 @@ export default function Hero() {
         <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/Abdulsalam-Abdulhamid-Lanre-frontendCV.pdf"
+            href="/Abdulsalam-Hamid-Lanre-FS.pdf"
             download="Abdulsalam_Abdulhamid_CV.pdf"
             className="inline-flex items-center mt-[3rem] gap-2 px-6 py-3 bg-gray-700 hover:bg-gray-900 hover:text-green-300 text-green-500 font-medium rounded-xl shadow-lg hover:shadow-xl transition-all"
         >
