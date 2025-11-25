@@ -8,7 +8,7 @@ const TextAnimation = () => {
   const [text, setText] = useState('');
   const [currentPositionIndex, setCurrentPositionIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-  const name = "Abdulhamid Abdulsalam";
+  const name = "Lanre Abdulsalam";
   const typingSpeed = 100;
   const eraseSpeed = 1000; 
   const pauseDuration = 15000; 
