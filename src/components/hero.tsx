@@ -91,12 +91,12 @@ export default function Hero() {
               <p className='text-xs margarine-regular'>Years of <br /> experience</p>
             </div>
 
-            <div className='flex items-center justify-center gap-3'>
+            {/* <div className='flex items-center justify-center gap-3'>
               <h4 className='text-6xl dancing-script-topic'>
                 <NumberCounter inView={inView} targetNumber={4} duration={200} />
               </h4>
               <p className='text-xs margarine-regular'>Major projects<br />completed</p>
-            </div>
+            </div> */}
 
             <div className='flex items-center justify-center gap-3'>
               <h4 className='text-6xl dancing-script-topic'>
