@@ -70,7 +70,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <div className="text-white text-xl font-bold">
-            <h1 className="text-4xl dancing-script-topic inline">Abdulhamid</h1>{" "}
+            <h1 className="text-4xl dancing-script-topic inline">Lanre</h1>{" "}
             <span className="text-3xl green">.</span>
           </div>
         </Link>
@@ -166,7 +166,7 @@ const Navbar = () => {
           <Link href="/">
             <div className="text-white text-xl font-bold">
               <h1 className="text-xl dancing-script-topic inline">
-                Abdulhamid Abdulsalam
+                Lanre Abdulsalam
               </h1>{" "}
               <span className="text-3xl green">.</span>
             </div>
