@@ -70,4 +70,4 @@ const TextAnimation = () => {
   );
 };
 
-export default TextAnimation;
+export default React.memo(TextAnimation);

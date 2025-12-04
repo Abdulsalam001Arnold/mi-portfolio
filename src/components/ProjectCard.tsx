@@ -2,19 +2,19 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import Link from "next/link";
 
 type ProjectCardProps = {
  video: string;
+ poster: string;
   title: string;
   description: string;
   technologies: string[];
   link: string;
 };
 
-const ProjectCard = ({ video, title, description, technologies, link }: ProjectCardProps) => {
+const ProjectCard = ({ video, poster, title, description, technologies, link }: ProjectCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const techRef = useRef<HTMLDivElement[] | HTMLSpanElement[]>([]);
 
@@ -63,6 +63,9 @@ const ProjectCard = ({ video, title, description, technologies, link }: ProjectC
           loop
           muted
           autoPlay
+
+          preload={"none"}
+          poster={poster}
           className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
         />
       </div>

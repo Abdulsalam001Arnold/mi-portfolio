@@ -44,6 +44,6 @@ const NumberCounter = ({ inView ,targetNumber, duration } : NumberCountProps) =>
   );
 };
 
-export default NumberCounter;
+export default React.memo(NumberCounter);
 
 

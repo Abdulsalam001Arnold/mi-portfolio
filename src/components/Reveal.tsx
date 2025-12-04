@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
+
 const Reveal = ({ children } : {children: React.ReactNode}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
@@ -54,4 +55,4 @@ const Reveal = ({ children } : {children: React.ReactNode}) => {
   );
 };
 
-export default Reveal;
+export default React.memo(Reveal);

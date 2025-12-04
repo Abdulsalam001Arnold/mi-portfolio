@@ -3,8 +3,9 @@
 import image from "../assets/images/my-pic-removebg-preview.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import React from "react";
 
-export default function Photo() {
+const Photo = function () {
   return (
     <div className="relative w-full h-full flex justify-center items-center">
       <motion.div
@@ -63,3 +64,5 @@ export default function Photo() {
     </div>
   );
 }
+
+export default React.memo(Photo);
