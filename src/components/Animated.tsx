@@ -1,11 +1,11 @@
 'use client'
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const letters = ["G", "S", "A", "P"]; 
 
-export default function AnimatedTitle() {
+const AnimatedTitle = function () {
   const svgRefs = useRef<(SVGSVGElement | null | undefined)[]>([]);
 
   useEffect(() => {
@@ -68,3 +68,6 @@ export default function AnimatedTitle() {
     </div>
   );
 }
+
+
+export default React.memo(AnimatedTitle);

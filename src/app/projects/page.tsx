@@ -1,14 +1,17 @@
 import Reveal from "@/components/Reveal";
-import BackgroundAnimation from "@/components/background";
-import ProjectCard from "@/components/ProjectCard";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
   title: 'Flexing Projects :)',
   description: 'My Prjects and contributions'
 }
 
+const ProjectCard = dynamic(() => import("@/components/ProjectCard"), {
+    ssr: true,
+})
 
+const BackgroundAnimation = dynamic(() => import("@/components/background"), { ssr: true});
 export default function page() {
   return (
     <main className="w-full min-h-screen flex flex-col items-center justify-center bg-black/70 pt-[4rem] pb-[1.5rem]">
@@ -48,6 +51,7 @@ export default function page() {
             ]}
             video="https://res.cloudinary.com/dqpbdik90/video/upload/v1757089139/Notepad_-_Google_Chrome_2025-09-05_17-05-01_rzqrbr.mp4"
             link="https://note-pad-jade.vercel.app/"
+            poster={"/Notepad.png"}
           />
         </Reveal>
 
@@ -55,6 +59,7 @@ export default function page() {
         <Reveal>
           <ProjectCard
             title="De-gemini "
+            poster={"/De-gemini.png"}
             description="A fully operational cleaning services platform serving thousands of active users, allowing them to:
 
 Book services and choose preferred time slots for appointments.
@@ -91,6 +96,7 @@ It showcases my ability to deliver production-ready, scalable solutions that pro
         <Reveal>
           <ProjectCard
             title="FOTO-C APP"
+            poster={"/foto-c.png"}
             description={`I contributed to this project while working at a former company. The platform was built to connect photographers, editors, and users bringing them closer together in a collaborative space. It enables professionals to showcase their portfolios, share edits, and engage with users who are seeking creative talent.
             
             My contributions played a key role in the platform’s success, helping shape the user experience and functionality in a way that made the project one of the most impactful initiatives I’ve worked on.
@@ -112,6 +118,7 @@ It showcases my ability to deliver production-ready, scalable solutions that pro
         <Reveal>
           <ProjectCard
             title="Archbuild"
+            poster={"/Archbuild.png"}
             description="This was my final full-stack project, officially approved as part of my Full-Stack Web Development certification. The project is a complete example website for an architectural company, designed to present services, showcase past projects, and provide an engaging digital presence for clients. I built the frontend with a modern, responsive design ensuring accessibility across devices. The backend was structured to manage company information dynamically, while also allowing easy updates to services and project details."
             technologies={[
               "React",
@@ -127,6 +134,7 @@ It showcases my ability to deliver production-ready, scalable solutions that pro
         <Reveal>
           <ProjectCard
             title="Archbuild API (Companion Backend Project)"
+            poster={"/Archbuild.png"}
             description="This was my final full-stack project, officially approved as part of my Full-Stack Web Development certification. The project is a complete example website for an architectural company, designed to present services, showcase past projects, and provide an engaging digital presence for clients. I built the frontend with a modern, responsive design ensuring accessibility across devices. The backend was structured to manage company information dynamically, while also allowing easy updates to services and project details."
             technologies={["Javascript", "Node.js"]}
             video="https://res.cloudinary.com/dqpbdik90/video/upload/v1757174605/archbuild-api.vercel.app_-_Google_Chrome_2025-09-06_17-01-01_aim8lt.mp4"

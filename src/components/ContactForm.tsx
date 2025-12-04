@@ -2,13 +2,13 @@
 
 "use client";
 
-import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
+import React, { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ToastContainer, toast } from "react-toastify";
 import Loader from "./Loader";
 
 
-export default function ContactForm() {
+const ContactForm = function () {
   const formRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLInputElement>(null);
   const contentRef = useRef<HTMLTextAreaElement>(null);
@@ -292,3 +292,6 @@ export default function ContactForm() {
     </div>
   );
 }
+
+
+export default React.memo(ContactForm);

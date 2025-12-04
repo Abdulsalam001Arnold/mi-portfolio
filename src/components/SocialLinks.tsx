@@ -6,8 +6,9 @@ import Link from "next/link";
 import { IoLogoGithub, IoLogoInstagram } from "react-icons/io5";
 import { FaLinkedin, FaTiktok } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import React from "react";
 
-export default function SocialLinks() {
+const SocialLinks = function() {
   const links = [
     {
       href: "https://github.com",
@@ -50,3 +51,5 @@ export default function SocialLinks() {
     </div>
   );
 }
+
+export default React.memo(SocialLinks);

@@ -14,7 +14,7 @@ import {motion} from "framer-motion";
 gsap.registerPlugin(useGSAP);
 
 
-export default function Hero() {
+const Hero = function () {
   const container = useRef<HTMLDivElement | null>(null);
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -138,3 +138,6 @@ export default function Hero() {
     </div>
   );
 }
+
+
+export default React.memo(Hero);
