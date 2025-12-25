@@ -63,7 +63,7 @@ const Hero = function () {
           </div>
 
           <Reveal>
-            <div className='w-full md:w-full mt-2'>
+            <div className='w-full md:w-full mt-6'>
               <p className='text-sm w-full text-center text-white playwrite-au-nsw-text hero-text'>
            I build production-ready web and mobile applications used by real users. I specialize in frontend architecture, backend integration, authentication, and payment systems. I’ve shipped scalable products end-to-end and led frontend delivery in production environments.
               </p>
@@ -111,7 +111,7 @@ const Hero = function () {
         <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/Abdulsalam-Hamid-Lanre-FS.pdf"
+            href="/Lanre-Hamid.pdf"
             download="Abdulsalam_Abdulhamid_CV.pdf"
             className="inline-flex items-center mt-[3rem] gap-2 px-6 py-3 bg-gray-700 hover:bg-gray-900 hover:text-green-300 text-green-500 font-medium rounded-xl shadow-lg hover:shadow-xl transition-all"
         >
