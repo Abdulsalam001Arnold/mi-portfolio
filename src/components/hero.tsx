@@ -65,7 +65,7 @@ const Hero = function () {
           <Reveal>
             <div className='w-full md:w-full mt-2'>
               <p className='text-sm w-full text-center text-white playwrite-au-nsw-text hero-text'>
-                I build responsive, user-friendly web and mobile applications using modern technologies and I believe in writing clean, maintainable code and delivering products that not only meet but exceed client expectations.
+           I build production-ready web and mobile applications used by real users. I specialize in frontend architecture, backend integration, authentication, and payment systems. I’ve shipped scalable products end-to-end and led frontend delivery in production environments.
               </p>
             </div>
           </Reveal>

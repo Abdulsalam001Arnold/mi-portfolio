@@ -14,9 +14,7 @@ const TextAnimation = () => {
   const pauseDuration = 15000; 
 
   const positions = useMemo(() => [
-    "Full-stack web Developer",
-    "Mobile Developer",
-    "Problem Solver",
+    "Full-Stack Engineer (Web & Mobile)",
     "Tech Enthusiast"
   ], []);
 
