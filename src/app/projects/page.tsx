@@ -52,6 +52,15 @@ export default function page() {
             video="https://res.cloudinary.com/dqpbdik90/video/upload/v1757089139/Notepad_-_Google_Chrome_2025-09-05_17-05-01_rzqrbr.mp4"
             link="https://note-pad-jade.vercel.app/"
             poster={"/Notepad.png"}
+            role={'Full-stack Developer'}
+            githubLink={'https://github.com/Abdulsalam001Arnold/Note-pad'}
+            owned={[
+                "Frontend: React, Next.js, Tailwindcss, GSAP, Zustand",
+                "Backend: Node.js, Express, Mongoose (ODM), MongoDB",
+                "Deployment: Vercel, Clerk",
+            ]}
+            impact={['A simple, intuitive notepad app for jotting down ideas, notes, and sketches on the go.', 'Easy to use and customize with a variety of themes.', 'Cloud sync and archive for privacy.']}
+            tagline={'A simple, intuitive notepad app for jotting down ideas, notes, and sketches on the go.'}
           />
         </Reveal>
 
@@ -60,21 +69,7 @@ export default function page() {
           <ProjectCard
             title="De-gemini "
             poster={"/De-gemini.png"}
-            description="A fully operational cleaning services platform serving thousands of active users, allowing them to:
-
-Book services and choose preferred time slots for appointments.
-
-Pay securely using integrated payment gateways (Stripe/Paystack).
-
-Authenticate and authorize with secure user accounts (JWT-based flows).
-
-Locate services by entering their postcode for accurate and timely delivery.
-
-Manage bookings through an intuitive and optimized user interface.
-
-The application is highly optimized for performance and scalability, handling thousands of users while maintaining smooth and responsive interactions. This project demonstrates real-world, end-to-end full-stack development, including frontend UI, backend APIs, database management, payment integration, and secure cloud deployment.
-
-It showcases my ability to deliver production-ready, scalable solutions that provide real value to users."
+            description="A fully operational cleaning services platform serving thousands of active users."
             technologies={[
               "Git",
               "React.js",
@@ -89,6 +84,15 @@ It showcases my ability to deliver production-ready, scalable solutions that pro
             ]}
             video="https://res.cloudinary.com/dqpbdik90/video/upload/v1763141733/de-gemini_a0ewkx.mp4"
             link="https://degeminiservices.co.uk"
+            githubLink={'https://github.com/de-gemini/v1-UI'}
+            tagline={'A fully operational cleaning services platform serving thousands of active users in the UK.'}
+            role={'Frontend Developer'}
+            impact={['A fully operational cleaning services platform serving thousands of active users in the UK.', 'Making life easier for customers by providing a seamless online experience. ', 'Helping to grow the business by increasing revenue and customer satisfaction.']}
+            owned={[
+                "Frontend: React, Tailwindcss, GSAP, Zustand",
+                "API Integration: Axios, Stripe",
+                "Deployment: Vercel",
+            ]}
           />
         </Reveal>
 
@@ -112,6 +116,15 @@ It showcases my ability to deliver production-ready, scalable solutions that pro
             ]}
             video="https://res.cloudinary.com/dqpbdik90/video/upload/v1757091642/project_t2pija.mp4"
             link="https://app.foto-c.com"
+            role={'Frontend Developer'}
+            impact={['A collaborative photography platform for photographers, editors, and users.', 'Breaching the gap between professional photographers and the general public by connecting them with creative talent.', 'Helping to grow the business by increasing revenue.']}
+            owned={[
+                "Frontend: React, Tailwindcss, GSAP, Zustand",
+                "API Integration",
+                "Deployment: Vercel",
+            ]}
+            githubLink={''}
+            tagline={'A collaborative photography platform for photographers, editors, and users.'}
           />
         </Reveal>
 
@@ -128,6 +141,16 @@ It showcases my ability to deliver production-ready, scalable solutions that pro
             ]}
             video="https://res.cloudinary.com/dqpbdik90/video/upload/v1757114768/Archbuild____Architectural_Website_-_Google_Chrome_2024-10-23_15-25-00_hz6gq6.mp4"
             link="https://archbuild.vercel.app/"
+            githubLink={'https://github.com/Abdulsalam001Arnold/Archbuild'}
+            owned={[
+                "Frontend: React, Tailwindcss, framer-motion",
+                "Backend: Node.js, Express, Mongoose (ODM), MongoDB",
+                "Deployment: Vercel",
+                "API Integration: Node.js, Express, Mongoose (ODM), MongoDB",
+            ]}
+            tagline={'A complete example website for an architectural company, designed to present services, showcase past projects, and provide an engaging digital presence for clients.'}
+            role={'Frontend Developer'}
+            impact={['A complete example website for an architectural company, designed to present services, showcase past projects, and provide an engaging digital presence for clients.', 'A modern, responsive design ensuring accessibility across devices.', 'A complete example website for an architectural company, designed to present services, showcase past projects, and provide an engaging digital presence for clients.']}
           />
         </Reveal>
 
@@ -139,6 +162,15 @@ It showcases my ability to deliver production-ready, scalable solutions that pro
             technologies={["Javascript", "Node.js"]}
             video="https://res.cloudinary.com/dqpbdik90/video/upload/v1757174605/archbuild-api.vercel.app_-_Google_Chrome_2025-09-06_17-01-01_aim8lt.mp4"
             link="https://archbuild-api.vercel.app/api/projectList"
+            githubLink={'https://github.com/Abdulsalam001Arnold/archbuild-api'}
+            owned={[
+                "Backend: Node.js, Express, Mongoose (ODM), MongoDB",
+                "Deployment: Vercel",
+                "API Integration: Node.js, Express, Mongoose (ODM), MongoDB",
+            ]}
+            tagline={'A complete example website for an architectural company, designed to present services, showcase past projects, and provide an engaging digital presence for clients.'}
+            role={'Backend Developer'}
+            impact={['A complete example website for an architectural company, designed to present services, showcase past projects, and provide an engaging digital presence for clients.', 'A modern, responsive design ensuring accessibility across devices.', 'A complete example website for an architectural company, designed to present services, showcase past projects, and provide an engaging digital presence for clients.']}
           />
         </Reveal>
       </div>

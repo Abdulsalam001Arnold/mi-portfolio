@@ -17,14 +17,53 @@ const Contact = function(){
                 Contact Me
             </motion.h1>
 
+            {/* Clear CTA at the top */}
+            <Reveal>
+                <div className="mt-[2rem] px-4 max-w-3xl mx-auto">
+                    <div className="bg-gradient-to-br from-green-500/20 to-green-700/20 backdrop-blur-md border-2 border-green-500 rounded-2xl p-6 md:p-8 text-center">
+                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 playwrite-au-nsw-text">
+                            Looking for full-time, contract, or freelance work
+                        </h2>
+                        <p className="text-xl text-white mb-4 margarine-regular">
+                            Let's build something great together
+                        </p>
+                        <div className="flex flex-col md:flex-row gap-3 justify-center items-center">
+                            <a
+                                href="mailto:abdulsalamabdulhamidlanre@gmail.com"
+                                className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-flex items-center gap-2"
+                            >
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                </svg>
+                                Email Me
+                            </a>
+                            <a
+                                href="https://calendly.com/abdulsalamabulhamidarnold/30min"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-flex items-center gap-2"
+                            >
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                                </svg>
+                                Schedule a Call
+                            </a>
+                        </div>
+                        <p className="text-sm text-gray-300 mt-4 margarine-regular">
+                            abdulsalamabdulhamidlanre@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </Reveal>
+
             <Reveal>
                 <div className="px-4 flex flex-col items-center justify-center mt-[3rem]">
-                    <h1 className="playwrite-au-nsw-text text-2x text-white">
+                    <h1 className="playwrite-au-nsw-text text-2xl text-white">
                         Get in Touch
                     </h1>
-                    <p className="text-[18px] margarine-regular mt-[0.3rem] sm:w-full md:w-full lg:w-[60%] text-white">
-                        I'd love to hear from you! Whether you have a question, a project
-                        idea, or just want to connect, feel free to reach out.
+                    <p className="text-[18px] margarine-regular mt-[0.3rem] sm:w-full md:w-full lg:w-[60%] text-white text-center">
+                        Whether you have a project in mind, a question to ask, or simply want to connect, feel free to reach out.
                     </p>
                 </div>
             </Reveal>
@@ -133,23 +172,6 @@ const Contact = function(){
                         </li>
                     </Reveal>
                 </ul>
-            </div>
-
-            <div className="px-2">
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-white playwrite-au-nsw-text text-2xl mt-[2rem]"
-                >
-                    Let's Collaborate!
-                </motion.h2>
-
-                <Reveal>
-                    <p className="text-[18px] margarine-regular mt-[0.3rem] sm:w-full md:w-full lg:w-[60%] text-white">
-                        Whether you have a project in mind, a question to ask, or simply want to connect, feel free to reach out. I'm always open to meaningful conversations, new opportunities, and impactful collaborations
-                    </p>
-                </Reveal>
             </div>
         </div>
     );

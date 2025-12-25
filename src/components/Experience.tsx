@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import Reveal from "./Reveal";
 
@@ -11,33 +9,25 @@ export default function Experience() {
             </h1>
 
             <div className="relative w-[90%] md:w-[70%] lg:w-[60%] border-l-[2px] border-gray-600 pl-6">
-                {/* Dot indicator */}
                 <span className="absolute -left-[8px] top-0 w-4 h-4 bg-green-500 rounded-full"></span>
 
                 <Reveal>
                     <div className="mb-8">
-                        <h2 className="text-white text-2xl font-semibold">Cloud Ethusiast</h2>
-                        <p className="text-gray-400 text-lg mb-1">Full-stack web developer</p>
+                        <h2 className="text-white text-2xl font-semibold">Cloud Enthusiast</h2>
+                        <p className="text-gray-400 text-lg mb-1">Full-stack Web Developer</p>
                         <p className="text-gray-500 text-sm mb-4">August 2024 - September 2025</p>
-                        <p className="text-gray-300 leading-relaxed margarine-regular">
-                            I began my journey at <span className="text-white font-medium">Cloud Enthusiast</span> as an intern,
-                            where my dedication and performance quickly earned me a staffed position.
-                            During my time there, I played a key role in building a
-                            <span className="text-white font-medium">scalable web application</span>
-                            from the ground up — handling both frontend and backend development.
-                            <br />
-                            I was actively involved in several <span className="text-white font-medium">debugging sessions</span>
-                            to support the engineering team, ensuring high performance and stability across the system.
-                            Through this experience, I gained hands-on expertise in scalable architecture,
-                            problem-solving, and team collaboration within a real production environment.
-                        </p>
+
+                        <ul className="text-gray-300 leading-relaxed margarine-regular space-y-2 list-disc list-inside">
+                            <li>Built production apps with user authentication, payments, and real-world reliability</li>
+                            <li>Owned frontend delivery from UI to backend integration</li>
+                            <li>Actively participated in debugging sessions to support engineering team</li>
+                            <li>Gained hands-on expertise in scalable architecture and production workflows</li>
+                        </ul>
                     </div>
                 </Reveal>
             </div>
 
-
             <div className="relative mt-[2rem] w-[90%] md:w-[70%] lg:w-[60%] border-l-[2px] border-gray-600 pl-6">
-                {/* Dot indicator */}
                 <span className="absolute -left-[8px] top-0 w-4 h-4 bg-green-500 rounded-full"></span>
 
                 <Reveal>
@@ -45,16 +35,13 @@ export default function Experience() {
                         <h2 className="text-white text-2xl font-semibold">Bloomy Technologies</h2>
                         <p className="text-gray-400 text-lg mb-1">Full-stack Web Development Instructor / Mentor</p>
                         <p className="text-gray-500 text-sm mb-4">April 2025 - Present</p>
-                        <p className="text-gray-300 leading-relaxed margarine-regular">
-                            At <span className="text-white font-medium">Bloomy Technologies</span>,
-                            I’ve had the privilege of mentoring and training aspiring developers in full-stack web development.
-                            Over time, I’ve discovered a new passion for <span className="text-white font-medium">teaching and mentorship</span>,
-                            producing outstanding students who consistently deliver exceptional results.
-                            <br />
-                            My efforts have been recognized across the organization, earning me a reputation as one of the
-                            <span className="text-white font-medium">most effective and inspiring instructors</span> at Bloomy.
-                            Guiding students to unlock their potential has become one of the most rewarding parts of my journey in tech.
-                        </p>
+
+                        <ul className="text-gray-300 leading-relaxed margarine-regular space-y-2 list-disc list-inside">
+                            <li>Mentored and trained developers on full-stack workflows</li>
+                            <li>Produced outstanding students with consistent exceptional results</li>
+                            <li>Recognized as one of the most effective instructors at Bloomy Technologies</li>
+                            <li>Developed curriculum and teaching methods for practical software development</li>
+                        </ul>
                     </div>
                 </Reveal>
             </div>

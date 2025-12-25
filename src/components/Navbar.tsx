@@ -107,23 +107,23 @@ const Navbar = () => {
           </li>
           <li className="flex flex-col items-center justify-center gap-1 text-xl md:text-xl lg:text-[14px] mb-6 md:mb-5 lg:mb-0">
             <Link
-              href="/about"
-              className={`block py-2 px-4 links relative margarine-regular`}>
-              About
-              <span
-                className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
-                  location === "/about" ? "w-full" : "hover:w-full w-0"
-                }`}></span>
-            </Link>
-          </li>
-          <li className="flex flex-col items-center justify-center gap-1 text-xl md:text-xl lg:text-[14px] mb-6 md:mb-5 lg:mb-0">
-            <Link
               href="/projects"
               className={`block py-2 px-4 links relative margarine-regular`}>
               My Projects
               <span
                 className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
                   location === "/projects" ? "w-full" : "hover:w-full w-0"
+                }`}></span>
+            </Link>
+          </li>
+          <li className="flex flex-col items-center justify-center gap-1 text-xl md:text-xl lg:text-[14px] mb-6 md:mb-5 lg:mb-0">
+            <Link
+              href="/about"
+              className={`block py-2 px-4 links relative margarine-regular`}>
+              About
+              <span
+                className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
+                  location === "/about" ? "w-full" : "hover:w-full w-0"
                 }`}></span>
             </Link>
           </li>
@@ -186,23 +186,23 @@ const Navbar = () => {
             </li>
             <li className="flex flex-col items-center justify-center gap-1 text-xl md:text-4xl lg:text-[14px] mb-6 md:mb-5 lg:mb-0">
               <Link
-                href="/about"
-                className={`block py-2 px-4 links relative margarine-regular`}>
-                About
-                <span
-                  className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
-                    location === "/about" ? "w-full" : "hover:w-full w-0"
-                  }`}></span>
-              </Link>
-            </li>
-            <li className="flex flex-col items-center justify-center gap-1 text-xl md:text-4xl lg:text-[14px] mb-6 md:mb-5 lg:mb-0">
-              <Link
                 href="/projects"
                 className={`block py-2 px-4 links relative margarine-regular`}>
                 My Projects
                 <span
                   className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
                     location === "/projects" ? "w-full" : "hover:w-full w-0"
+                  }`}></span>
+              </Link>
+            </li>
+            <li className="flex flex-col items-center justify-center gap-1 text-xl md:text-4xl lg:text-[14px] mb-6 md:mb-5 lg:mb-0">
+              <Link
+                href="/about"
+                className={`block py-2 px-4 links relative margarine-regular`}>
+                About
+                <span
+                  className={`absolute bottom-0 left-0 h-1 bg-green-500 transition-all duration-300 ${
+                    location === "/about" ? "w-full" : "hover:w-full w-0"
                   }`}></span>
               </Link>
             </li>
