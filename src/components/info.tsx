@@ -1,6 +1,7 @@
 'use client'
 
 import { TiHtml5 } from "react-icons/ti";
+import { BiLogoPostgresql } from "react-icons/bi";
 import AnimatedTitle from "./Animated";
 import React from "react";
 import { TbBrandPrisma } from "react-icons/tb";
@@ -82,7 +83,8 @@ const Info = function () {
                 { Icon: SiMongodb, label: "MongoDB" },
                 { Icon: SiMongoose, label: "Mongoose" },
                 { Icon: TbBrandPrisma, label: "Prisma" },
-                { Icon: GrMysql, label: "MySQL" }
+                { Icon: GrMysql, label: "MySQL" },
+                { Icon: BiLogoPostgresql, label: "PostgreSQL" }
             ]
         },
         {
