@@ -6,6 +6,8 @@ import React from "react";
 import { TbBrandPrisma } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
 import { FaStripe } from "react-icons/fa";
+import { SiN8N, SiOpenai, SiAnthropic } from "react-icons/si";
+import { MdAutoAwesome } from "react-icons/md";
 import { SiJsonwebtokens } from "react-icons/si";
 import { SiExpo } from "react-icons/si";
 import { SiJest } from "react-icons/si";
@@ -71,7 +73,7 @@ const Info = function () {
                 { Icon: SiExpress, label: "Express.js" },
                 { Icon: IoLogoJavascript, label: "Javascript" },
                 { Icon: TbApi, label: "Restful API" },
-                {Icon: GrGraphQl, label: "GraphQL"}
+                { Icon: GrGraphQl, label: "GraphQL" }
             ]
         },
         {
@@ -79,15 +81,23 @@ const Info = function () {
             skills: [
                 { Icon: SiMongodb, label: "MongoDB" },
                 { Icon: SiMongoose, label: "Mongoose" },
-                {Icon: TbBrandPrisma, label: "Prisma"},
-                {Icon: GrMysql, label: "MySQL"}
+                { Icon: TbBrandPrisma, label: "Prisma" },
+                { Icon: GrMysql, label: "MySQL" }
+            ]
+        },
+        {
+            category: "AI & Automation",
+            badge: "Latest Skill",
+            skills: [
+                { Icon: SiN8N, label: "n8n Workflows" },
+                { Icon: MdAutoAwesome, label: "AI Automation" }
             ]
         },
         {
             category: "Mobile",
             skills: [
                 { Icon: TbBrandReactNative, label: "React Native" },
-                {Icon: SiExpo, label: "Expo"}
+                { Icon: SiExpo, label: "Expo" }
             ]
         },
         {
@@ -98,13 +108,12 @@ const Info = function () {
                 { Icon: SiPassport, label: "Passport.js" },
                 { Icon: FaStripe, label: "Stripe" },
                 { Icon: SiJsonwebtokens, label: "JWT" },
-
             ]
         },
         {
             category: "Other Tools",
             skills: [
-                { component: AnimatedTitle, label: "GSAP" },
+                { Component: AnimatedTitle, label: "GSAP" },
                 { Icon: SiRedux, label: "Redux" },
                 { Icon: FaBootstrap, label: "Bootstrap" },
                 { Icon: SiPostman, label: "Postman" },
@@ -153,6 +162,12 @@ const Info = function () {
                         <h3 className="text-green-400 text-xl font-semibold mb-4 playwrite-au-nsw-text">
                             {category.category}
                         </h3>
+
+                        {category.badge && (
+                            <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full animate-pulse">
+                                {category.badge}
+                            </span>
+                        )}
                         <motion.div
                             variants={containerVariant}
                             initial="hidden"
@@ -160,24 +175,29 @@ const Info = function () {
                             viewport={{ once: true, amount: 0.2 }}
                             className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
                         >
-                            {category.skills.map((item, index) => (
-                                <motion.div
-                                    key={index}
-                                    variants={itemVariant}
-                                    className="flex flex-col items-center justify-center"
-                                >
-                                    <div className="icon-box p-4 w-full aspect-square flex items-center justify-center">
-                                        {item.component ? (
-                                            <item.component />
-                                        ) : item.Icon ? (
-                                            <item.Icon className="text-white text-[3rem] md:text-[4rem]" />
-                                        ) : null}
-                                    </div>
-                                    <p className="text-[12px] md:text-[20px] playwrite-au-nsw-text text-white text-center mt-2">
-                                        {item.label}
-                                    </p>
-                                </motion.div>
-                            ))}
+                            {category.skills.map((item, index) => {
+                                // Extract the Component with capital C
+                                const { Icon, label } = item;
+                                
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        variants={itemVariant}
+                                        className="flex flex-col items-center justify-center"
+                                    >
+                                        <div className="icon-box p-4 w-full aspect-square flex items-center justify-center">
+                                            {Icon ? (
+                                                <Icon className="text-4xl md:text-5xl lg:text-6xl text-white" />
+                                            ) : item.Component ? (
+                                                <item.Component />
+                                            ) : null}
+                                        </div>
+                                        <p className="text-[12px] md:text-[20px] playwrite-au-nsw-text text-white text-center mt-2">
+                                            {label}
+                                        </p>
+                                    </motion.div>
+                                );
+                            })}
                         </motion.div>
                     </motion.div>
                 ))}

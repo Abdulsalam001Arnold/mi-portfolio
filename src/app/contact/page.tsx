@@ -15,6 +15,9 @@ export default function page() {
         <main className="flex flex-col items-center justify-center min-h-screen w-full bg-black/70 pt-[4rem]">
             <BackgroundAnimation/>
             <Contact/>
+            <div className="mt-7 w-full">
+            <ContactForm/>
+            </div>
         </main>
     )
 };

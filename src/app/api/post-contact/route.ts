@@ -14,22 +14,23 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { name, email, message }: ContactProps = body;
+
+    const n8nwebhook = "https://primary-production-3d85.up.railway.app/webhook/contact-form"
     if(email !== "" && message !== "") {
 
-      await resend.emails.send({
-        from: "Portfolio Contact <onboarding@resend.dev>",
-        to: process.env.GMAIL_USER!, // your inbox
-        subject: `New message from ${name || "Anonymous"}`,
-        text: `
-  You received a new message:
-  
-  Name: ${name || "N/A"}
-  Email: ${email}
-  Message: ${message}
-        `,
-      });
+      await fetch(n8nwebhook, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              email,
+              message,
+              name
+          })
+      })
 
-        return NextResponse.json({success: true, message: 'Contact submitted successfully!'}, {status: 201})
+        return NextResponse.json({success: true, message: 'Message sent successfully!'})
     }
 
     return NextResponse.json({success: false, message: 'Email and message is required'}, {status: 400})

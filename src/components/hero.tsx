@@ -47,22 +47,22 @@ const Hero = function () {
   }, { scope: container });
 
   return (
-    <div ref={container} className='w-full h-full mt-[1.4rem] flex flex-col items-center justify-center relative z-0'>
+    <div ref={container} className='w-full mt-[1.4rem] flex flex-col items-center justify-center relative z-0'>
       <div className='flex w-full flex-col-reverse md:flex-col-reverse lg:flex-row items-center justify-center gap-9'>
 
-        <div className='flex flex-col items-center md:items-center lg:items-start justify-center sm:w-full md:w-full lg:w-[31rem]'>
+        <div className='flex flex-col mt-3 items-center md:items-center lg:items-start justify-center sm:w-full md:w-full lg:w-[31rem]'>
           <Reveal>
-            <h3 className='text-white font-light text-[11px] margarine-regular tracking-[2px] hero-header'>
+            <h3 className='text-white font-light text-[8px] margarine-regular tracking-[2px] hero-header'>
               Software Developer
             </h3>
           </Reveal>
 
-          <div className='sm:w-[60%] h-[10rem] md:h-[4rem] lg:h-[5rem] md:w-full lg:w-full px-5 md:px-0 lg:px-0 text-center md:text-center lg:text-start mb-1 mt-1'>
+          <div className='sm:w-[60%] h-[10rem] mb-[2.5rem] md:mb-[4rem] lg:mb-[7rem] md:h-[4rem] lg:h-[5rem] md:w-full lg:w-full px-5 md:px-0 lg:px-0 text-center md:text-center lg:text-start mb-1 mt-1'>
             <TextAnimation />
           </div>
 
           <Reveal>
-            <div className='w-full md:w-full mt-6'>
+            <div className='w-full md:w-full mt-6 relative z-[1]'>
               <p className='text-sm w-full text-center lg:text-start text-white playwrite-au-nsw-text hero-text'>
                 Production-ready software engineered for real users, payments, and scale.
               </p>
@@ -77,28 +77,6 @@ const Hero = function () {
         <div className='order-1 w-full md:w-fit lg:w-fit lg:order-none mb-8 lg:mb-0 flex-col items-center justify-center'>
           <Photo />
         </div>
-      </div>
-
-      <div className='w-full mt-[2rem] flex justify-center items-center text-white'>
-        <Reveal>
-          <div className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center justify-center gap-3 md:gap-10 lg:gap-20 px-3'>
-
-            <div className='flex items-center justify-center gap-3'>
-              <h4 ref={ref} className='text-6xl dancing-script-topic'>
-                <NumberCounter inView={inView} targetNumber={3} duration={100} />
-              </h4>
-              <p className='text-xs margarine-regular'>Years of <br /> experience</p>
-            </div>
-
-            <div className='flex items-center justify-center gap-3'>
-              <h4 className='text-6xl dancing-script-topic'>
-                <NumberCounter inView={inView} targetNumber={27} duration={400} />
-              </h4>
-              <p className='text-xs margarine-regular'>Technologies <br /> mastered</p>
-            </div>
-
-          </div>
-        </Reveal>
       </div>
 
       {/* Featured Project Callout */}
@@ -148,7 +126,7 @@ const Hero = function () {
       </motion.div>
 
       {/* CTA Buttons */}
-      <div className='flex flex-col md:flex-row gap-4 mt-[3rem] items-center justify-center'>
+      <div className='flex flex-col mb-[8rem] md:mb-[4rem] lg:mb-[3rem] md:flex-row gap-4 mt-[3rem] items-center justify-center'>
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
